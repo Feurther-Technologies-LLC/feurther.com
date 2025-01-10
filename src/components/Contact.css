@@ -1,0 +1,68 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  transform: scale(1.1);
+  background-color: #ff6600;
+}
+
+.contact-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-buttons {
+    gap: 20px;
+  }
+  
+  .contact-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact-button img {
+    width: 25px;
+    height: 25px;
+  }
+} 

@@ -1,0 +1,49 @@
+    /* src/components/Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    z-index: 1000; /* 确保导航栏在最上层 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding-right: 60px;
+  }
+  
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu li a:hover {
+    color: #ff6600; /* 鼠标悬停时的颜色变化 */
+  }
+  
+  /* 响应式设计：在小屏幕下隐藏菜单或转换为汉堡菜单（可选） */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* 简化为隐藏，后续可添加响应式菜单 */
+    }
+  }
+  
