@@ -34,9 +34,9 @@ const HeroSection = () => {
 
       {/* 这里的 overlay 用于放文字、按钮等 */}
       <div className="hero-overlay">
-        <h1>PUSH UP App</h1>
-        <p>用视觉识别，让你的俯卧撑训练更高效</p>
-        <a href="#intro" className="hero-btn">了解更多</a>
+        <h1>FITVANA</h1>
+        <p>Make your push-up training more efficient with visual recognition</p>
+        <a href="#intro" className="hero-btn">Learn More</a>
       </div>
     </div>
   );

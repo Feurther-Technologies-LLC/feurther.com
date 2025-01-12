@@ -5,7 +5,7 @@ const Download = () => {
   return (
     <section id="download" className="download-section">
       <div className="download-container">
-        <h2>不要犹豫，现在加入这充满激情的健身圣地，开始运动吧！</h2>
+        <h2>Don't hesitate, join us and start exercising now!</h2>
         <div className="download-buttons">
           <a 
             href="https://apps.apple.com/your-app-link" 

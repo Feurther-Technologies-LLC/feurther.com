@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <Navbar />
       <HeroSection />
-      <Intro /> {/* 渲染 Intro 组件 */}
-      <Features /> {/* 添加这行 */}
-      <Download /> {/* 添加下载组件 */}
-      <Contact /> {/* 添加联系方式组件 */}
-      <Footer /> {/* 添加页脚组件 */}
-      {/* 以后在这里添加其他组件 */}
+      <Intro /> {/* Render Intro component */}
+      <Features /> {/* Render Features component */}
+      <Download /> {/* Render Download component */}
+      <Contact /> {/* Render Contact component */}
+      <Footer /> {/* Render Footer component */}
+      {/* Add other components here in the future */}
     </div>
   );
 }

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2>如果有任何疑问，欢迎在以下方式联系我们！</h2>
+        <h2>If you have any questions, feel free to contact us through the following channels!</h2>
         <div className="contact-buttons">
           <a 
             href="https://github.com/Feurther-Technologies-LLC" 
