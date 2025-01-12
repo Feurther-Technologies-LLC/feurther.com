@@ -40,6 +40,7 @@
   },
   "homepage": "https://feurther.com",
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "rimraf": "^6.0.1"
   }
 }
