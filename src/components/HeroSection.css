@@ -28,16 +28,18 @@
     height: 100%;
     color: #fff;
     text-align: center;
+    padding: 0 20px; /* 添加水平内边距 */
   }
   
   .hero-overlay h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem); /* 响应式字体大小 */
     margin-bottom: 1rem;
   }
   
   .hero-overlay p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 2rem;
+    max-width: 800px; /* 限制文本宽度 */
   }
   
   .hero-btn {
@@ -52,5 +54,17 @@
   
   .hero-btn:hover {
     background-color: #ff8533;
+  }
+  
+  /* 移动设备适配 */
+  @media (max-width: 768px) {
+    .hero-container {
+      height: 80vh;
+    }
+    
+    .hero-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
   }
   

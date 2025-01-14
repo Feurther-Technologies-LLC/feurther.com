@@ -16,7 +16,7 @@ const Features = () => {
       description: "Earn experience rewards after training, level up, and unlock unique titles and trophies!",
       images: [
         "/images/feature_2_1.png",
-        "/images/feature_2_1.png"
+        "/images/feature_2_3.jpg"
       ]
     },
     // 可以继续添加更多特色
