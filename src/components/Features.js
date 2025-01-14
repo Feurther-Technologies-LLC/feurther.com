@@ -16,10 +16,18 @@ const Features = () => {
       description: "Earn experience rewards after training, level up, and unlock unique titles and trophies!",
       images: [
         "/images/feature_2_1.png",
-        "/images/feature_2_3.jpg"
+        "/images/feature_2_2.png"
       ]
     },
-    // 可以继续添加更多特色
+    {
+      id: 3,
+      title: "Customizable Goals & Progress Tracking",
+      description: "Set personalized daily and weekly fitness goals that match your schedule. Track your workout progress with detailed statistics and visualizations, helping you stay motivated and consistent on your fitness journey.",
+      images: [
+        "/images/feature_3_1.png",
+        "/images/feature_3_2.png"
+      ]
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

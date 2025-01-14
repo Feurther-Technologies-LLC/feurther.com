@@ -15,8 +15,8 @@ const Intro = React.forwardRef((props, ref) => {
         </div>
 
         <div className="intro-text">
-          <h2>About FITVANA</h2>
-          <p>FITVANA is an iOS application that uses full-body visual recognition technology to help you train push-ups more effectively.</p>
+          <h2>About FITANA</h2>
+          <p>FITANA is an iOS application that uses full-body visual recognition technology to help you train push-ups more effectively.</p>
           <p>Built-in gamification system and reward mechanisms make your training journey more enjoyable and fun.</p>
           <p>Voice coaching is provided during exercise to guide you through proper form and technique.</p>
         </div>
