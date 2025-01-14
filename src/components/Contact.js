@@ -19,14 +19,14 @@ const Contact = () => {
             />
           </a>
           <a 
-            href="https://twitter.com/your-twitter" 
+            href="https://discord.gg/sQgNVkY8bC" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="contact-button"
           >
             <img 
-              src={`${process.env.PUBLIC_URL}/images/twitter.png`}
-              alt="X (Twitter)" 
+              src={`${process.env.PUBLIC_URL}/images/discord.png`}
+              alt="Discord" 
             />
           </a>
           <a 
