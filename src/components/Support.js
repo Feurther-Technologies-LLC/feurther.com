@@ -3,7 +3,7 @@ import './Support.css';
 
 const Support = () => {
   return (
-    <section className="support-section">
+    <section id="support" className="support-section">
       <div className="support-container">
         <h1>Technical Support</h1>
         

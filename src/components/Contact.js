@@ -40,9 +40,9 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact-links">
-          <a href="/support" className="contact-link">Support</a>
+          <a href="#support" className="contact-link">Support</a>
           <span className="contact-divider">|</span>
-          <a href="/privacy" className="contact-link">Privacy Policy</a>
+          <a href="#privacy" className="contact-link">Privacy Policy</a>
         </div>
       </div>
     </section>

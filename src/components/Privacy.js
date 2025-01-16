@@ -3,7 +3,7 @@ import './Privacy.css';
 
 const Privacy = () => {
   return (
-    <section className="privacy-section">
+    <section id="privacy" className="privacy-section">
       <div className="privacy-container">
         <h1>Privacy Policy</h1>
         <p className="last-updated">Last Updated: 2025/1/16</p>
