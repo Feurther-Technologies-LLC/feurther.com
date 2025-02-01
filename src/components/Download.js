@@ -8,7 +8,7 @@ const Download = () => {
         <h2>Don't hesitate, join us and start exercising now!</h2>
         <div className="download-buttons">
           <a 
-            href="https://apps.apple.com/your-app-link" 
+            href="https://apps.apple.com/app/fitana/id6739538834" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="app-store-button"
