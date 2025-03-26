@@ -5,5 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/feurther.com/", // 替换为你的仓库名
+  base: "/feurther-technologies-llc.github.io/",
 });
