@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
               </p>
               <div className="max-w-md">
                 <form
-                  action="https://formsubmit.co/emailsubscribe@feurther.com"
+                  action="https://formsubmit.co/email-sub@feurther.com"
                   method="POST"
                   className="flex"
                 >
