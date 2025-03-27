@@ -1,8 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import recognitionImg from "../assets/rec.png";
-import gamificationImg from "../assets/gamification.png";
-import trackImg from "../assets/track.png";
+// @ts-ignore
+import mainPageImg from "../assets/screenshot/main page.PNG";
+// @ts-ignore
+import trophyImg from "../assets/screenshot/trophy.PNG";
+// @ts-ignore
+import setGoalImg from "../assets/screenshot/set goal.PNG";
+// @ts-ignore
+import workoutMenuImg from "../assets/screenshot/workoutMenu.PNG";
+// @ts-ignore
+import workoutSummaryImg from "../assets/screenshot/workout summary.PNG";
 
 const Features: React.FC = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -105,8 +112,8 @@ const Features: React.FC = () => {
         "Works in various lighting conditions",
       ],
       buttonText: "Learn More",
-      image: recognitionImg,
-      imageAlt: "Posture Recognition Demo",
+      image: workoutMenuImg,
+      imageAlt: "Workout Menu Screenshot",
     },
     // 卡片 2: 游戏化设计
     {
@@ -121,8 +128,8 @@ const Features: React.FC = () => {
         "Complete daily challenges for bonus rewards",
       ],
       buttonText: "View Rewards",
-      image: gamificationImg,
-      imageAlt: "Gamification Elements",
+      image: trophyImg,
+      imageAlt: "Trophy and Rewards Screenshot",
     },
     // 卡片 3: 可定制目标和进度跟踪
     {
@@ -137,8 +144,8 @@ const Features: React.FC = () => {
         "Receive personalized recommendations",
       ],
       buttonText: "Set Goals",
-      image: trackImg,
-      imageAlt: "Progress Tracking Dashboard",
+      image: workoutSummaryImg,
+      imageAlt: "Workout Summary and Tracking Screenshot",
     },
   ];
 
@@ -209,31 +216,6 @@ const Features: React.FC = () => {
                 {feature.title}
               </h3>
               <p className="text-gray-600">{feature.description}</p>
-              <div
-                className="mt-6 flex items-center text-orange-500 font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 cursor-pointer"
-                onClick={() => {
-                  setCurrentCard(index);
-                  document
-                    .getElementById("featureDetails")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Learn more
-                <svg
-                  className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -342,20 +324,16 @@ const Features: React.FC = () => {
                             </li>
                           ))}
                         </ul>
-
-                        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 shadow-md hover:shadow-lg">
-                          {card.buttonText}
-                        </button>
                       </div>
 
                       <div className="bg-gradient-to-br from-orange-50 to-white p-6 h-full flex items-center justify-center">
                         {/* 实际图片 */}
                         <div className="relative w-full h-full flex items-center justify-center">
-                          <div className="rounded-xl overflow-hidden shadow-md w-full max-w-md aspect-[4/3]">
+                          <div className="rounded-xl overflow-hidden max-w-[280px] h-auto mx-auto">
                             <img
                               src={card.image}
                               alt={card.imageAlt}
-                              className="w-full h-full object-cover object-center"
+                              className="w-full h-full object-contain"
                             />
                           </div>
                         </div>
