@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logoSvg from "../assets/logo.svg";
+import appStoreWhiteBadge from "../assets/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 
 const Footer: React.FC = () => {
   const staggerChildren = {
@@ -57,23 +58,12 @@ const Footer: React.FC = () => {
             <div className="mt-8">
               <div className="text-sm text-gray-500 mb-2">Download App</div>
               <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 rounded-lg px-4 py-2 transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M17.5227 7.39674C17.4042 7.47192 15.9735 8.33288 15.9735 10.2145C16.0099 12.3853 17.809 13.1368 17.8444 13.1357C17.8354 13.1861 17.491 14.4195 16.5576 15.6881C15.7294 16.8156 14.8455 18 13.5438 18C12.2421 18 11.9331 17.1901 10.4245 17.1901C9.00926 17.1901 8.46035 18 7.26307 18C6.06579 18 5.19709 16.9158 4.21614 15.5154C3.0384 13.8228 2.09998 11.1982 2.09998 8.72118C2.09998 4.93803 4.57665 3.00645 7.0054 3.00645C8.2731 3.00645 9.3621 3.88329 10.1818 3.88329C10.9648 3.88329 12.1892 2.95901 13.6289 2.95901C14.077 2.95901 16.089 2.99699 17.5227 5.15454C17.418 5.21432 15.5999 6.27844 15.5999 8.7471C15.5999 8.80049 15.5999 8.82748 15.5999 8.82748V8.82645C15.5999 8.85147 15.6025 8.87546 15.6052 8.89946L17.5227 7.39674Z" />
-                    <path d="M13.1458 2.7998C13.4158 2.01257 13.9158 1.22534 14.6516 0.662109C15.3873 0.0999658 16.495 -0.209033 17.3809 0.145786C17.4653 0.933015 17.2301 1.72024 16.7926 2.35857C16.3551 2.996 15.5451 3.41668 14.7225 3.36329C14.6245 2.56596 14.9992 1.77669 15.2819 1.35703C15.5646 0.93737 16.0872 0.519706 16.6588 0.277344C16.6588 0.277344 16.5303 0.581707 16.4018 0.886071C16.2734 1.19044 15.4634 2.67247 14.7516 2.77925C14.675 2.79165 14.3473 2.82682 14.0309 2.77925C13.7144 2.73167 13.4124 2.67452 13.1458 2.7998Z" />
-                  </svg>
-                  <div>
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold -mt-1">App Store</div>
-                  </div>
+                <a href="#" className="transition-transform hover:scale-105">
+                  <img
+                    src={appStoreWhiteBadge}
+                    alt="Download on the App Store"
+                    className="h-10"
+                  />
                 </a>
               </div>
             </div>

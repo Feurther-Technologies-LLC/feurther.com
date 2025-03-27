@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import appStoreBadge from "../assets/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg";
+import appStoreWhiteBadge from "../assets/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 
 const Hero: React.FC = () => {
   return (
@@ -26,30 +28,26 @@ const Hero: React.FC = () => {
               Fitopia makes your push-up training more efficient with AI boosted
               visual recognition.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-lg hover:shadow-orange-200/50 flex items-center justify-center group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Download Demo
-                <svg
-                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div className="flex flex-col sm:flex-row gap-4 items-end">
+              <div className="flex flex-col">
+                <p className="text-xs text-orange-500 font-medium mb-1">
+                  DEMO VERSION AVAILABLE
+                </p>
+                <motion.a
+                  href="#"
+                  className="transition duration-300 flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  <img
+                    src={appStoreBadge}
+                    alt="Download on the App Store"
+                    className="h-12"
                   />
-                </svg>
-              </motion.button>
+                </motion.a>
+              </div>
               <motion.button
-                className="border-2 border-orange-500 text-orange-500 font-semibold py-4 px-8 rounded-xl hover:bg-orange-50 transition duration-300 flex items-center justify-center"
+                className="border-2 border-orange-500 text-orange-500 font-semibold py-3 px-8 rounded-xl hover:bg-orange-50 transition duration-300 flex items-center justify-center h-12"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
@@ -69,7 +67,7 @@ const Hero: React.FC = () => {
               </p>
               <div className="max-w-md">
                 <form
-                  action="email-list@feurther.com"
+                  action="https://formsubmit.co/emailsubscribe@feurther.com"
                   method="POST"
                   className="flex"
                 >
