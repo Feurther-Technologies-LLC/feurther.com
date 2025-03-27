@@ -77,7 +77,7 @@ const Header: React.FC = () => {
             <motion.a
               key={item.name}
               href={`#${item.id}`}
-              className="text-gray-700 hover:text-orange-500 font-medium transition-colors relative group"
+              className="text-gray-700 hover:text-orange-500 font-medium text-lg transition-colors relative group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -90,7 +90,10 @@ const Header: React.FC = () => {
               <span className="absolute inset-x-0 bottom-0 h-0.5 bg-orange-500 transform scale-x-0 origin-left transition-transform group-hover:scale-x-100"></span>
             </motion.a>
           ))}
-          <motion.button
+          <motion.a
+            href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-5 rounded-lg transition duration-300 shadow-md hover:shadow-orange-200/50"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,8 +101,8 @@ const Header: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started
-          </motion.button>
+            Download demo
+          </motion.a>
         </nav>
 
         {/* Mobile menu button */}
@@ -145,7 +148,7 @@ const Header: React.FC = () => {
                 <motion.a
                   key={item.name}
                   href={`#${item.id}`}
-                  className="text-gray-700 hover:text-orange-500 hover:bg-orange-50 font-medium transition-colors py-3 px-6"
+                  className="text-gray-700 hover:text-orange-500 hover:bg-orange-50 font-medium text-lg transition-colors py-3 px-6"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -157,15 +160,17 @@ const Header: React.FC = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <motion.button
+              <motion.a
+                href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 mx-6 mt-3 rounded-lg transition duration-300"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
-                onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
-              </motion.button>
+                Download demo
+              </motion.a>
             </nav>
           </motion.div>
         )}

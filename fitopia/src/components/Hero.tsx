@@ -34,7 +34,9 @@ const Hero: React.FC = () => {
                   DEMO VERSION AVAILABLE
                 </p>
                 <motion.a
-                  href="#"
+                  href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition duration-300 flex items-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

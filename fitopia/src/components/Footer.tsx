@@ -58,7 +58,12 @@ const Footer: React.FC = () => {
             <div className="mt-8">
               <div className="text-sm text-gray-500 mb-2">Download App</div>
               <div className="flex gap-4">
-                <a href="#" className="transition-transform hover:scale-105">
+                <a
+                  href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
                   <img
                     src={appStoreWhiteBadge}
                     alt="Download on the App Store"
