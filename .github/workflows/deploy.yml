@@ -21,15 +21,15 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: cd Fitopia && npm install
+        run: cd fitopia && npm install
 
       - name: Build
-        run: cd Fitopia && npm run build
+        run: cd fitopia && npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Fitopia/dist
+          path: fitopia/dist
 
   deploy:
     environment:
