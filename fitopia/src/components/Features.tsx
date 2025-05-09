@@ -3,12 +3,15 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 // 导入图片资源
 // @ts-ignore
-import workoutMenuImg from "../assets/screenshot/workoutMenu.PNG";
+import workoutMenuImg from "../assets/screenshot/workoutMenu_new.png";
 // @ts-ignore
-import trophyImg from "../assets/screenshot/trophy.PNG";
+import setgoal from "../assets/screenshot/set goal_new.PNG";
 // @ts-ignore
-import workoutSummaryImg from "../assets/screenshot/workout summary.PNG";
-
+import workoutSummaryImg from "../assets/screenshot/workout summary_new.png";
+// @ts-ignore
+import ip from "../assets/screenshot/ip.png";
+import visual from "../assets/screenshot/visual.png";
+import firscore from "../assets/screenshot/fitscore.png";
 // 定义特性项类型
 interface Feature {
   tag: string;
@@ -26,8 +29,8 @@ const Features: React.FC = () => {
   const controls = useAnimation();
 
   // 为每个特性卡片创建单独的引用和动画控制器
-  const featureRefs = [useRef(null), useRef(null), useRef(null)];
-  const featureControls = [useAnimation(), useAnimation(), useAnimation()];
+  const featureRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+  const featureControls = [useAnimation(), useAnimation(), useAnimation(), useAnimation(), useAnimation()];
   const featureInView = featureRefs.map(ref => useInView(ref, { once: false, amount: 0.3 }));
 
   useEffect(() => {
@@ -60,10 +63,10 @@ const Features: React.FC = () => {
         "Works in various lighting conditions",
       ],
       buttonText: "Learn More",
-      image: workoutMenuImg,
+      image: visual,
       imageAlt: "Workout Menu Screenshot",
     },
-    // 卡片 2: 游戏化设计
+    // 
     {
       tag: "FEATURE 02",
       title: "Gamification Design",
@@ -76,7 +79,7 @@ const Features: React.FC = () => {
         "Complete daily challenges for rewards",
       ],
       buttonText: "View Rewards",
-      image: trophyImg,
+      image: workoutSummaryImg,
       imageAlt: "Trophy and Rewards Screenshot",
     },
     // 卡片 3: 可定制目标和进度跟踪
@@ -92,7 +95,22 @@ const Features: React.FC = () => {
         "Receive personalized recommendations",
       ],
       buttonText: "Set Goals",
-      image: workoutSummaryImg,
+      image: setgoal,
+      imageAlt: "Workout Summary and Tracking Screenshot",
+    },
+    {
+      tag: "FEATURE 04",
+      title: "Test your limits and get fit-score",
+      description:
+        "Set personalized fitness goals that fit your schedule and lifestyle, then track your progress with detailed analytics and visualizations.",
+      bulletPoints: [
+        "Create daily, weekly, or monthly targets",
+        "Track workout trends over time",
+        "Visualize improvement with detailed charts",
+        "Receive personalized recommendations",
+      ],
+      buttonText: "Set Goals",
+      image: firscore,
       imageAlt: "Workout Summary and Tracking Screenshot",
     },
   ];
@@ -209,24 +227,18 @@ const Features: React.FC = () => {
                   }
                 }}
               >
-                <div className="bg-gradient-to-br from-orange-50 to-white p-8 h-full flex items-center justify-center rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
-                  {/* 装饰性边框 */}
-                  <div className="absolute inset-0 border-2 border-orange-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-95 group-hover:scale-100"></div>
-                  
-                  <motion.div 
-                    className="relative w-full h-full flex items-center justify-center"
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  >
-                    <div className="rounded-xl overflow-hidden max-w-md mx-auto drop-shadow-lg">
-                      <img
-                        src={feature.image}
-                        alt={feature.imageAlt}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  </motion.div>
-                </div>
+                {/* 移除外容器，只保留图片 */}
+                <motion.div 
+                  className="w-full h-full flex items-center justify-center"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                >
+                  <img
+                    src={feature.image}
+                    alt={feature.imageAlt}
+                    className={`w-full h-auto ${ index === 0 ? 'max-w-[450px]' : 'max-w-[280px]'} mx-auto object-contain rounded-xl drop-shadow-lg`}
+                  />
+                </motion.div>
               </motion.div>
               
               {/* 文字部分 - 奇数索引在右，偶数索引在左 */}
@@ -315,20 +327,7 @@ const Features: React.FC = () => {
                     ))}
                   </motion.ul>
                   
-                  <motion.div
-                    variants={{
-                      hidden: { y: 20, opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
-                    }}
-                  >
-                    <motion.button 
-                      className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300 shadow-md hover:shadow-lg"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      {feature.buttonText}
-                    </motion.button>
-                  </motion.div>
+                  {/* 移除按钮部分 */}
                 </div>
               </motion.div>
             </motion.div>

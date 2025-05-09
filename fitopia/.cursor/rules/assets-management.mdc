@@ -1,5 +1,31 @@
 ---
-description:
-globs:
-alwaysApply: false
+description: 
+globs: 
+alwaysApply: true
 ---
+# 资源文件管理
+
+## 资源目录结构
+- [src/assets/](mdc:src/assets) - 主资源目录
+  - [screenshot/](mdc:src/assets/screenshot) - 应用截图
+  - [US/](mdc:src/assets/US) - 英文本地化资源
+  - [CN(SC)/](mdc:src/assets/CN(SC)/) - 简体中文本地化资源
+
+## 图像资源
+- `logo.svg` - 应用Logo
+- `appIcon.png` - 应用图标
+- `fitguy.jpg` - 健身形象图片
+
+## 视频资源
+- `background.mp4` - 背景视频
+- `hero-video.mp4` - 英雄区域视频
+
+## 资源使用指南
+- 图像优先使用SVG格式以保证清晰度
+- 大型媒体文件应进行适当压缩
+- 所有资源在组件中通过相对路径导入使用
+
+## 多语言支持
+- 文本资源按语言分组存放
+- 遵循相应的本地化目录结构
+
