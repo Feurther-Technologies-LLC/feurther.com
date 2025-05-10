@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 组件设计指南
+
+## 组件结构
+- 在 [src/components/](mdc:src/components) 中创建新组件
+- 每个组件应该是独立的，关注单一功能
+- 组件文件使用Pascal命名法 (例如: `FeatureCard.tsx`)
+
+## 主要页面组件
+- [Header.tsx](mdc:src/components/Header.tsx) - 响应式导航栏，包含Logo和导航链接
+- [Hero.tsx](mdc:src/components/Hero.tsx) - 主页面顶部区域，包含主标题和行动按钮
+- [Features.tsx](mdc:src/components/Features.tsx) - 产品特性展示区域
+- [Footer.tsx](mdc:src/components/Footer.tsx) - 页面底部，包含链接和版权信息
+
+## 样式指南
+- 优先使用TailwindCSS类
+- 使用响应式设计，确保在移动设备上正常显示
+- 动画效果通过AOS或Framer Motion实现
+
+## 组件和页面扩展
+如需添加新页面，请遵循既有结构，在App.tsx中添加新组件。
+

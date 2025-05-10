@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Fitopia 项目结构
+
+## 核心文件
+- 入口文件: [main.tsx](mdc:src/main.tsx) - React应用的主入口
+- 应用组件: [App.tsx](mdc:src/App.tsx) - 主应用组件，包含页面布局
+
+## 组件目录
+[src/components/](mdc:src/components) 目录包含所有React组件:
+- [Header.tsx](mdc:src/components/Header.tsx) - 网站头部导航栏
+- [Hero.tsx](mdc:src/components/Hero.tsx) - 主页面的英雄区域
+- [Features.tsx](mdc:src/components/Features.tsx) - 功能特性展示区域
+- [Footer.tsx](mdc:src/components/Footer.tsx) - 网站底部
+
+## 资源文件
+[src/assets/](mdc:src/assets) 目录包含图片、视频等资源文件
+
+## 配置文件
+- [vite.config.ts](mdc:vite.config.ts) - Vite 构建工具配置
+- [package.json](mdc:package.json) - 项目依赖项和脚本
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript 配置
+

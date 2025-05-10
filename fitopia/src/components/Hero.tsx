@@ -47,18 +47,7 @@ const Hero: React.FC = () => {
                   />
                 </motion.a>
               </div>
-              <motion.button
-                className="border-2 border-orange-500 text-orange-500 font-semibold py-3 px-8 rounded-xl hover:bg-orange-50 transition duration-300 flex items-center justify-center h-12"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  document
-                    .getElementById("features")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Learn More
-              </motion.button>
+             
             </div>
 
             {/* 社交证明改为邮箱订阅 */}

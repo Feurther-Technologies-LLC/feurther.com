@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 技术栈
+
+## 前端框架
+- React 19 - 使用最新的React框架
+- TypeScript - 用于类型检查
+- Vite - 作为构建工具
+
+## 样式
+- TailwindCSS - 用于样式设计
+- AOS (Animate On Scroll) - 用于滚动动画效果
+- Framer Motion - 用于高级动画
+
+## 代码风格建议
+- 使用函数组件和React Hooks
+- 遵循TypeScript类型定义
+- 使用ESLint进行代码规范检查
+
+## 项目命令
+- 开发环境: `npm run dev`
+- 构建项目: `npm run build` 
+- 预览构建: `npm run preview`
+
