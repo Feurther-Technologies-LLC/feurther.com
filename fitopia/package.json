@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://feurther.github.io/feurther.com",
+  "homepage": "https://feurther.com",
   "scripts": {
     "dev": "vite",
     "build": "npx tsc -b && vite build",
