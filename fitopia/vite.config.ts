@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/",
   assetsInclude: ["**/*.PNG"],
-  publicDir: "../public",
+  publicDir: "public",
 });
