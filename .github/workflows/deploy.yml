@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fitopia
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,10 +28,11 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: fitopia/package-lock.json
       - name: Install dependencies
-        run: cd fitopia && npm install
+        run: npm install
       - name: Build
-        run: cd fitopia && npm run build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
