@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
             </h3>
             <p className="text-gray-400 mb-8">
               Have a question or want to learn more about Fitopia? Reach out to
-              us through one of the following channels.
+              us through one of the following channel.
             </p>
 
             <div className="space-y-6">
