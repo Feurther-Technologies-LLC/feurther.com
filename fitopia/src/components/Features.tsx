@@ -5,7 +5,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 // @ts-ignore
 import workoutMenuImg from "../assets/screenshot/workoutMenu_new.png";
 // @ts-ignore
-import setgoal from "../assets/screenshot/set goal_new.PNG";
+import setgoal from "../assets/screenshot/set goal_new.png";
 // @ts-ignore
 import workoutSummaryImg from "../assets/screenshot/workout summary_new.png";
 // @ts-ignore
@@ -29,9 +29,23 @@ const Features: React.FC = () => {
   const controls = useAnimation();
 
   // 为每个特性卡片创建单独的引用和动画控制器
-  const featureRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
-  const featureControls = [useAnimation(), useAnimation(), useAnimation(), useAnimation(), useAnimation()];
-  const featureInView = featureRefs.map(ref => useInView(ref, { once: false, amount: 0.3 }));
+  const featureRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
+  const featureControls = [
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+  ];
+  const featureInView = featureRefs.map((ref) =>
+    useInView(ref, { once: false, amount: 0.3 })
+  );
 
   useEffect(() => {
     if (isInView) {
@@ -66,7 +80,7 @@ const Features: React.FC = () => {
       image: visual,
       imageAlt: "Workout Menu Screenshot",
     },
-    // 
+    //
     {
       tag: "FEATURE 02",
       title: "Gamification Design",
@@ -123,7 +137,7 @@ const Features: React.FC = () => {
     >
       {/* 背景装饰 - 增强版 */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50"></div>
-      <motion.div 
+      <motion.div
         className="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-orange-200 opacity-20 blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -135,7 +149,7 @@ const Features: React.FC = () => {
           repeatType: "reverse",
         }}
       ></motion.div>
-      <motion.div 
+      <motion.div
         className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-orange-100 opacity-30 blur-3xl"
         animate={{
           scale: [1, 1.1, 1],
@@ -197,38 +211,44 @@ const Features: React.FC = () => {
               }}
             >
               {/* 背景装饰元素 */}
-              <motion.div 
-                className={`absolute -z-10 rounded-full ${index % 2 === 0 ? '-left-10 md:-left-20' : '-right-10 md:-right-20'} top-1/4 w-32 h-32 md:w-40 md:h-40 bg-orange-50 opacity-40 blur-xl`}
+              <motion.div
+                className={`absolute -z-10 rounded-full ${
+                  index % 2 === 0
+                    ? "-left-10 md:-left-20"
+                    : "-right-10 md:-right-20"
+                } top-1/4 w-32 h-32 md:w-40 md:h-40 bg-orange-50 opacity-40 blur-xl`}
                 variants={{
                   hidden: { scale: 0, opacity: 0 },
-                  visible: { 
-                    scale: 1, 
+                  visible: {
+                    scale: 1,
                     opacity: 0.4,
                     transition: {
                       duration: 0.6,
-                    }
-                  }
+                    },
+                  },
                 }}
               ></motion.div>
-              
+
               {/* 图片部分 - 奇数索引在左，偶数索引在右 */}
-              <motion.div 
-                className={`w-full md:w-1/2 ${index % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}
+              <motion.div
+                className={`w-full md:w-1/2 ${
+                  index % 2 === 1 ? "md:order-2" : "md:order-1"
+                }`}
                 variants={{
                   hidden: { x: index % 2 === 0 ? -50 : 50, opacity: 0 },
-                  visible: { 
-                    x: 0, 
+                  visible: {
+                    x: 0,
                     opacity: 1,
                     transition: {
                       type: "spring",
                       stiffness: 80,
                       damping: 15,
-                    }
-                  }
+                    },
+                  },
                 }}
               >
                 {/* 移除外容器，只保留图片 */}
-                <motion.div 
+                <motion.div
                   className="w-full h-full flex items-center justify-center"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 200, damping: 10 }}
@@ -236,76 +256,80 @@ const Features: React.FC = () => {
                   <img
                     src={feature.image}
                     alt={feature.imageAlt}
-                    className={`w-full h-auto ${ index === 0 ? 'max-w-[450px]' : 'max-w-[280px]'} mx-auto object-contain rounded-xl drop-shadow-lg`}
+                    className={`w-full h-auto ${
+                      index === 0 ? "max-w-[450px]" : "max-w-[280px]"
+                    } mx-auto object-contain rounded-xl drop-shadow-lg`}
                   />
                 </motion.div>
               </motion.div>
-              
+
               {/* 文字部分 - 奇数索引在右，偶数索引在左 */}
-              <motion.div 
-                className={`w-full md:w-1/2 ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}
+              <motion.div
+                className={`w-full md:w-1/2 ${
+                  index % 2 === 1 ? "md:order-1" : "md:order-2"
+                }`}
                 variants={{
                   hidden: { x: index % 2 === 0 ? 50 : -50, opacity: 0 },
-                  visible: { 
-                    x: 0, 
+                  visible: {
+                    x: 0,
                     opacity: 1,
                     transition: {
                       type: "spring",
                       stiffness: 80,
                       damping: 15,
-                    }
-                  }
+                    },
+                  },
                 }}
               >
                 <div className="p-6">
-                  <motion.div 
+                  <motion.div
                     className="inline-block px-4 py-1.5 mb-5 bg-orange-100 text-orange-600 font-medium rounded-full text-xs shadow-sm"
                     variants={{
                       hidden: { y: -20, opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
+                      visible: { y: 0, opacity: 1 },
                     }}
                   >
                     {feature.tag}
                   </motion.div>
-                  <motion.h3 
+                  <motion.h3
                     className="text-2xl md:text-3xl font-bold mb-4 text-gray-800"
                     variants={{
                       hidden: { y: -20, opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
+                      visible: { y: 0, opacity: 1 },
                     }}
                   >
                     {feature.title}
                   </motion.h3>
-                  <motion.p 
+                  <motion.p
                     className="text-gray-600 mb-8 text-lg"
                     variants={{
                       hidden: { y: -20, opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
+                      visible: { y: 0, opacity: 1 },
                     }}
                   >
                     {feature.description}
                   </motion.p>
 
-                  <motion.ul 
+                  <motion.ul
                     className="space-y-4 mb-10"
                     variants={{
                       hidden: { opacity: 0 },
-                      visible: { opacity: 1 }
+                      visible: { opacity: 1 },
                     }}
                   >
                     {feature.bulletPoints.map((item, i) => (
-                      <motion.li 
-                        key={i} 
+                      <motion.li
+                        key={i}
                         className="flex items-start"
                         variants={{
                           hidden: { x: -10, opacity: 0 },
-                          visible: { 
-                            x: 0, 
+                          visible: {
+                            x: 0,
                             opacity: 1,
                             transition: {
-                              delay: i * 0.1
-                            }
-                          }
+                              delay: i * 0.1,
+                            },
+                          },
                         }}
                       >
                         <div className="bg-orange-100 rounded-full p-1 text-orange-500 mt-0.5 mr-3 flex-shrink-0">
@@ -326,7 +350,7 @@ const Features: React.FC = () => {
                       </motion.li>
                     ))}
                   </motion.ul>
-                  
+
                   {/* 移除按钮部分 */}
                 </div>
               </motion.div>
