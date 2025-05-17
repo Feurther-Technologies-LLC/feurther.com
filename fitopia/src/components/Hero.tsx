@@ -19,10 +19,12 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-orange-500">Transform</span> <br />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="text-orange-500">Transform</span>
+              <br />
               Your Fitness Journey
             </h1>
+
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
               Fitopia makes your in-home workout fun and effective with AI
               computer vision & game-like design.
@@ -40,7 +42,7 @@ const Hero: React.FC = () => {
                   <img
                     src={appStoreBadge}
                     alt="Download on the App Store"
-                    className="h-18"
+                    className="h-16"
                   />
                 </motion.a>
                 <p className="text-sm text-orange-500 font-medium mt-1 text-center">
