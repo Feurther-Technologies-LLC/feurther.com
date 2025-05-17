@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoSvg from "../assets/appIcon.png";
-
+import appIcon from "../assets/appIcon.png";
+import logoSvg from "../assets/logo.svg";
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -63,21 +63,21 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <motion.div
-          className="flex items-center"
+          className="flex items-center space-x-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={logoSvg} alt="Fitopia" className="h-10" />
+          <img src={appIcon} alt="Fitopia Icon" className="h-10" />
+          <img src={logoSvg} alt="Fitopia" className="h-8" />
         </motion.div>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item, index) => (
             <motion.a
               key={item.name}
               href={`#${item.id}`}
-              className="text-gray-700 hover:text-orange-500 font-medium text-lg transition-colors relative group"
+              className="text-gray-700 hover:text-orange-500 font-medium text-xl transition-colors relative group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
             href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-5 rounded-lg transition duration-300 shadow-md hover:shadow-orange-200/50"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-xl py-2 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-orange-200/50"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -104,7 +104,6 @@ const Header: React.FC = () => {
             Download demo
           </motion.a>
         </nav>
-
         {/* Mobile menu button */}
         <motion.button
           className="md:hidden flex items-center"
@@ -148,7 +147,7 @@ const Header: React.FC = () => {
                 <motion.a
                   key={item.name}
                   href={`#${item.id}`}
-                  className="text-gray-700 hover:text-orange-500 hover:bg-orange-50 font-medium text-lg transition-colors py-3 px-6"
+                  className="text-gray-700 hover:text-orange-500 hover:bg-orange-50 font-medium text-xl transition-colors py-3 px-6"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -164,7 +163,7 @@ const Header: React.FC = () => {
                 href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 mx-6 mt-3 rounded-lg transition duration-300"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-xl py-3 mx-6 mt-3 rounded-lg transition duration-300"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}

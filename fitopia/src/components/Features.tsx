@@ -18,7 +18,6 @@ interface Feature {
   title: string;
   description: string;
   bulletPoints: string[];
-  buttonText: string;
   image: string;
   imageAlt: string;
 }
@@ -65,8 +64,8 @@ const Features: React.FC = () => {
   // 特性卡片数据
   const featureCards: Feature[] = [
     {
-      tag: "Customize Your Workout",
-      title: "Personalize Your Training Goals",
+      tag: "Custom Workouts",
+      title: "Work out the way you want",
       description:
         "Set personalized fitness goals that fit your schedule and lifestyle.",
       bulletPoints: [
@@ -74,7 +73,6 @@ const Features: React.FC = () => {
         "Track workout trends over time",
         "Receive personalized recommendations",
       ],
-      buttonText: "Set Goals",
       image: setgoal,
       imageAlt: "Workout Summary and Tracking Screenshot",
     },
@@ -89,7 +87,6 @@ const Features: React.FC = () => {
         "Get motivated voice like personal trainer by your side",
         "Record workout session and share with friends",
       ],
-      buttonText: "Learn More",
       image: visual,
       imageAlt: "Workout Menu Screenshot",
     },
@@ -102,21 +99,19 @@ const Features: React.FC = () => {
         "Earn XP and level up with each workout",
         "Unlock achievements and titles",
       ],
-      buttonText: "View Rewards",
       image: workoutSummaryImg,
       imageAlt: "Trophy and Rewards Screenshot",
     },
     {
       tag: "Evaluate Progress",
-      title: "Test your body With Standard Metrics",
+      title: "Test your body with Fit Score",
       description:
-        "Evaluate your fitness level based on US Army Standard. Show them what you've got!",
+        "Evaluate your strength and endurance with Fit Score, a scientific metric based on US Army & ACSM Standard.",
       bulletPoints: [
         "Visualize your real improvement with detailed charts",
         "Compete with others, and yourself",
         "Get a detailed report of your progress",
       ],
-      buttonText: "Set Goals",
       image: firscore,
       imageAlt: "Workout Summary and Tracking Screenshot",
     },
@@ -403,7 +398,7 @@ const Features: React.FC = () => {
                     {feature.tag}
                   </motion.div>
                   <motion.h3
-                    className="text-3xl md:text-4xl font-bold mb-4 text-gray-800"
+                    className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 italic"
                     variants={{
                       hidden: { y: -20, opacity: 0 },
                       visible: { y: 0, opacity: 1 },
@@ -476,9 +471,7 @@ const Features: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-medium text-orange-500 mb-4">
-            * Important Notice *
-          </p>
+          <p className="font-medium text-orange-500 mb-4">*Note</p>
           <p className="leading-relaxed">
             The current demo of Fitopia only supports push-up and iPhone
             platform. While using the application, please ensure adequate space
