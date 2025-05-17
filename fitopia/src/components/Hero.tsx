@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Fitopia brings you refreshig body-weight workout experiences with
+              Fitopia brings you refreshing body-weight workout experiences with
               AI computer vision & game-like design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-end">

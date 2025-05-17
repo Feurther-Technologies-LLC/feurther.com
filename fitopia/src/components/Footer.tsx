@@ -213,7 +213,7 @@ const Footer: React.FC = () => {
                        <body>
                          <h1>Privacy Policy</h1>
                          <p>Last Updated: 2025/1/16</p>
-                         <p>FITANA does not collect, store, or share any personal information. The app works entirely on your local device without any data collection.</p>
+                         <p>Fitopia does not collect, store, or share any personal information. The app works entirely on your local device without any data collection.</p>
                          <h2>Contact</h2>
                          <p>For any questions about this privacy policy, please contact us at:<br/>
                          Email: <a href="mailto:contact@feurther.com">contact@feurther.com</a></p>
