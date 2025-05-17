@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logoSvg from "../assets/appIcon.png";
+import logoSvg from "../assets/logo.svg";
 import appStoreWhiteBadge from "../assets/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 
 const Footer: React.FC = () => {
