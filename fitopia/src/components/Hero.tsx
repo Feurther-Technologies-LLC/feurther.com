@@ -20,14 +20,16 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-orange-500">Transform</span>
+              <span className="text-orange-500">
+                The simple, fun, and effective
+              </span>
               <br />
-              Your Fitness Journey
+              way to get fit
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Fitopia makes your in-home workout fun and effective with AI
-              computer vision & game-like design.
+              Fitopia brings you refreshig body-weight workout experiences with
+              AI computer vision & game-like design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-end">
               <div className="flex flex-col">
