@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logoSvg from "../assets/logo.svg";
+import logoSvg from "../assets/appIcon.png";
 import appStoreWhiteBadge from "../assets/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 
 const Footer: React.FC = () => {
@@ -53,7 +53,6 @@ const Footer: React.FC = () => {
             <img src={logoSvg} alt="Fitopia" className="h-10 mb-4" />
             <p className="text-gray-400 mb-6 max-w-xl">
               Empowering your fitness journey with technology and community.
-              Track, analyze, and improve your workouts with precision.
             </p>
             <div className="mt-8">
               <div className="text-sm text-gray-500 mb-2">Download App</div>
