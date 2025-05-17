@@ -24,14 +24,11 @@ const Hero: React.FC = () => {
               Your Fitness Journey
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Fitopia makes your push-up training more efficient with AI boosted
-              visual recognition.
+              Fitopia makes your in-home workout fun and effective with AI
+              computer vision & game-like design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-end">
               <div className="flex flex-col">
-                <p className="text-xs text-orange-500 font-medium mb-1">
-                  DEMO VERSION AVAILABLE
-                </p>
                 <motion.a
                   href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
                   target="_blank"
@@ -43,17 +40,19 @@ const Hero: React.FC = () => {
                   <img
                     src={appStoreBadge}
                     alt="Download on the App Store"
-                    className="h-12"
+                    className="h-18"
                   />
                 </motion.a>
+                <p className="text-sm text-orange-500 font-medium mt-1 text-center">
+                  Demo Download Available
+                </p>
               </div>
-             
             </div>
 
             {/* 社交证明改为邮箱订阅 */}
             <div className="mt-12">
               <p className="text-gray-500 mb-3 text-sm font-medium">
-                JOIN EMAIL LIST
+                Join our email list
               </p>
               <div className="max-w-md">
                 <form
@@ -66,15 +65,15 @@ const Hero: React.FC = () => {
                     name="email"
                     required
                     placeholder="Your email address"
-                    className="flex-grow rounded-l-lg px-4 py-3 border-2 border-orange-200 focus:border-orange-400 outline-none text-gray-600"
+                    className="flex-grow rounded-l-lg px-5 py-4 border-2 border-orange-200 focus:border-orange-400 outline-none text-gray-600 text-base"
                   />
                   <button
                     type="submit"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-3 rounded-r-lg transition-colors flex items-center"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-4 rounded-r-lg transition-colors flex items-center text-base"
                   >
                     Subscribe
                     <svg
-                      className="w-4 h-4 ml-2"
+                      className="w-5 h-5 ml-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
