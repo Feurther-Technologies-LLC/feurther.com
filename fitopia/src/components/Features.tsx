@@ -1,17 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 // 导入图片资源
-// @ts-ignore
-import workoutMenuImg from "../assets/screenshot/workoutMenu_new.png";
-// @ts-ignore
 import setgoal from "../assets/screenshot/set goal_new.png";
-// @ts-ignore
 import workoutSummaryImg from "../assets/screenshot/workout summary_new.png";
-// @ts-ignore
-import ip from "../assets/screenshot/ip.png";
 import visual from "../assets/screenshot/visual.png";
 import firscore from "../assets/screenshot/fitscore.png";
+
 // 定义特性项类型
 interface Feature {
   tag: string;
@@ -27,23 +22,64 @@ const Features: React.FC = () => {
   const isInView = useInView(SectionRef, { once: false, amount: 0.1 });
   const controls = useAnimation();
 
-  // 为每个特性卡片创建单独的引用和动画控制器
-  const featureRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-  ];
-  const featureControls = [
-    useAnimation(),
-    useAnimation(),
-    useAnimation(),
-    useAnimation(),
-    useAnimation(),
-  ];
-  const featureInView = featureRefs.map((ref) =>
-    useInView(ref, { once: false, amount: 0.3 })
+  // 为每个特性卡片创建单独的引用和动画控制器 - 直接在组件顶层调用Hooks
+  const featureRef1 = useRef(null);
+  const featureRef2 = useRef(null);
+  const featureRef3 = useRef(null);
+  const featureRef4 = useRef(null);
+  const featureRef5 = useRef(null);
+
+  const featureControl1 = useAnimation();
+  const featureControl2 = useAnimation();
+  const featureControl3 = useAnimation();
+  const featureControl4 = useAnimation();
+  const featureControl5 = useAnimation();
+
+  // 使用 useMemo 来创建数组，但不在其中调用 Hooks
+  const featureRefs = useMemo(
+    () => [featureRef1, featureRef2, featureRef3, featureRef4, featureRef5],
+    [featureRef1, featureRef2, featureRef3, featureRef4, featureRef5]
+  );
+
+  const featureControls = useMemo(
+    () => [
+      featureControl1,
+      featureControl2,
+      featureControl3,
+      featureControl4,
+      featureControl5,
+    ],
+    [
+      featureControl1,
+      featureControl2,
+      featureControl3,
+      featureControl4,
+      featureControl5,
+    ]
+  );
+
+  // 修复 React Hooks 规则问题 - 将 useInView 调用移到组件顶层
+  const featureInView1 = useInView(featureRef1, { once: false, amount: 0.3 });
+  const featureInView2 = useInView(featureRef2, { once: false, amount: 0.3 });
+  const featureInView3 = useInView(featureRef3, { once: false, amount: 0.3 });
+  const featureInView4 = useInView(featureRef4, { once: false, amount: 0.3 });
+  const featureInView5 = useInView(featureRef5, { once: false, amount: 0.3 });
+
+  const featureInView = useMemo(
+    () => [
+      featureInView1,
+      featureInView2,
+      featureInView3,
+      featureInView4,
+      featureInView5,
+    ],
+    [
+      featureInView1,
+      featureInView2,
+      featureInView3,
+      featureInView4,
+      featureInView5,
+    ]
   );
 
   useEffect(() => {
