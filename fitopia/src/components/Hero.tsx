@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
               Fitopia brings you refreshing body-weight workout experiences with
               AI computer vision & game-like design.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-end">
-              <div className="flex flex-col">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
+              <div className="flex flex-col items-start sm:items-center">
                 <motion.a
                   href="https://apps.apple.com/us/app/pushup-everyday-fitopia/id6739538834?l"
                   target="_blank"
@@ -47,37 +47,37 @@ const Hero: React.FC = () => {
                     className="h-16"
                   />
                 </motion.a>
-                <p className="text-sm text-orange-500 font-medium mt-1 text-center">
+                <p className="text-sm text-orange-500 font-medium mt-1 text-left sm:text-center">
                   Demo Download Available
                 </p>
               </div>
             </div>
 
             {/* 社交证明改为邮箱订阅 */}
-            <div className="mt-12">
-              <p className="text-gray-500 mb-3 text-sm font-medium">
+            <div className="mt-12 w-full">
+              <p className="text-gray-500 mb-3 text-sm font-medium text-left">
                 Join our email list
               </p>
-              <div className="max-w-md">
+              <div className="max-w-md w-full">
                 <form
                   action="https://formsubmit.co/email-sub@feurther.com"
                   method="POST"
-                  className="flex"
+                  className="flex w-full"
                 >
                   <input
                     type="email"
                     name="email"
                     required
                     placeholder="Your email address"
-                    className="flex-grow rounded-l-lg px-5 py-4 border-2 border-orange-200 focus:border-orange-400 outline-none text-gray-600 text-base"
+                    className="flex-grow rounded-l-lg px-4 md:px-5 py-3 md:py-4 border-2 border-orange-200 focus:border-orange-400 outline-none text-gray-600 text-sm md:text-base"
                   />
                   <button
                     type="submit"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-4 rounded-r-lg transition-colors flex items-center text-base"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 md:px-6 py-3 md:py-4 rounded-r-lg transition-colors flex items-center text-sm md:text-base"
                   >
                     Subscribe
                     <svg
-                      className="w-5 h-5 ml-2"
+                      className="w-4 h-4 md:w-5 md:h-5 ml-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -99,32 +99,30 @@ const Hero: React.FC = () => {
 
         {/* 右侧视频 */}
         <motion.div
-          className="lg:w-3/5 relative z-10"
+          className="w-full lg:w-3/5 relative z-10 mt-12 lg:mt-0"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <div className="relative">
-            <div className="absolute -top-12 -left-12 w-48 h-48 bg-orange-200 rounded-lg rotate-6 z-0"></div>
-            <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-orange-300 rounded-lg -rotate-6 z-0"></div>
+            {/* 背景装饰元素 - 在移动端隐藏以减少干扰 */}
+            <div className="hidden md:block absolute -top-12 -left-12 w-48 h-48 bg-orange-200 rounded-lg rotate-6 z-0"></div>
+            <div className="hidden md:block absolute -bottom-12 -right-12 w-56 h-56 bg-orange-300 rounded-lg -rotate-6 z-0"></div>
 
-            <div className="rounded-2xl overflow-hidden shadow-2xl relative z-10 border-8 border-white transform translate-x-8 translate-y-8">
-              <video
-                className="w-full h-auto object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{ minHeight: "480px" }}
-              >
-                <source src="/background.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            {/* 视频容器 - 响应式调整变换效果和边框 */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl relative z-10 border-4 md:border-8 border-white transform translate-x-2 translate-y-2 md:translate-x-8 md:translate-y-8">
+              {/* 16:9 比例容器 */}
+              <div className="video-aspect-ratio-16-9">
+                <video autoPlay muted loop playsInline>
+                  <source src="/background.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
 
-            {/* 浮动元素 */}
+            {/* 浮动元素 - 响应式调整位置和大小 */}
             <motion.div
-              className="absolute -right-6 top-6 bg-white rounded-lg shadow-lg p-3 z-20"
+              className="absolute -right-3 md:-right-6 top-3 md:top-6 bg-white rounded-lg shadow-lg p-2 md:p-3 z-20"
               animate={{
                 y: [0, -8, 0],
               }}
@@ -135,9 +133,9 @@ const Hero: React.FC = () => {
               }}
             >
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-green-500 rounded-full flex items-center justify-center mr-2">
                   <svg
-                    className="w-4 h-4 text-white"
+                    className="w-3 h-3 md:w-4 md:h-4 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -155,13 +153,13 @@ const Hero: React.FC = () => {
                   <div className="text-xs font-medium text-gray-500">
                     Daily Goal
                   </div>
-                  <div className="text-sm font-bold">Completed!</div>
+                  <div className="text-xs md:text-sm font-bold">Completed!</div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              className="absolute -left-6 bottom-24 bg-white rounded-lg shadow-lg p-3 z-20"
+              className="absolute -left-3 md:-left-6 bottom-12 md:bottom-24 bg-white rounded-lg shadow-lg p-2 md:p-3 z-20"
               animate={{
                 y: [0, 8, 0],
               }}
@@ -173,9 +171,9 @@ const Hero: React.FC = () => {
               }}
             >
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
                   <svg
-                    className="w-4 h-4 text-white"
+                    className="w-3 h-3 md:w-4 md:h-4 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -193,7 +191,7 @@ const Hero: React.FC = () => {
                   <div className="text-xs font-medium text-gray-500">
                     Calories
                   </div>
-                  <div className="text-sm font-bold">268 kcal</div>
+                  <div className="text-xs md:text-sm font-bold">268 kcal</div>
                 </div>
               </div>
             </motion.div>
